@@ -6,6 +6,7 @@ var crypto = require('crypto');
 
 var UserSchema = new Schema({
   name: String,
+  rollNumber: String,
   email: { type: String, lowercase: true },
   role: {
     type: String,
@@ -13,7 +14,10 @@ var UserSchema = new Schema({
   },
   hashedPassword: String,
   provider: String,
-  salt: String
+  salt: String,
+  project: [ { type: Schema.Types.ObjectId, ref: 'Project' } ],
+  preferences: [ { type: Schema.Types.ObjectId, ref: 'Project' } ],
+  skills: [String]
 });
 
 /**
