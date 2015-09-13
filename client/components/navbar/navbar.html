@@ -1,17 +1,17 @@
 
 <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
-  <div class="container" style="margin-left : 0px; margin-right : 0px">
+  <div class="container">
    
     <div class="nav navbar-nav navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="/Home">NSS-IITM</a>
-                <ul class="nav navbar-nav">
-                    <li id="ahome" class="active"><a href="/Home">Home</a></li>
-                    <li id="aprojects"><a href="/projects">Preferences</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="signup" target="_blank"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <a class="brand navbar-left" href="/Home">NSS-IITM</a>
+                <ul class="nav navbar-nav navbar-right" ng-hide="isLoggedIn()">
+                    <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="isLoggedIn()">
+                    <li><a href="preferences">Proferences</a></li>
+                    <li><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
                 </ul>
             </div>
         </div>

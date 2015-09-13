@@ -1,0 +1,73 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container-fluid main_container" style="padding-top: 0px">
+     <div class="row-fluid">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row-fluid">
+            <header class="jumbotron">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <img class="img-rounded pull-left" src="assets/images/nss_logo.png">
+                    </div>
+                    <div class="span8">
+                        <center>
+                            <h1>National Service Scheme</h1>
+                            <h3><a href="login"> Preferences </a></h3>
+                        </center>
+                    </div>
+                </div>
+            </header>
+          </div>
+			<div class="container">
+			  <div class="row">
+			    <div class="col-sm-12">
+			      <form class="form" name="form" ng-submit="submit(form)" novalidate>
+			        <h3>Preferences:</h3>
+			        <div class="form-group">
+			          <label>Preference 1</label>
+			          <select class="form-control" ng-options="item._id as item.name for item in projects" ng-model="user.preferences[0]" required>
+			          </select>
+			          <p ng-show="alerts[0]" style="color:red">Duplicate</p>
+			        </div>
+			        <div class="form-group">
+			          <label>Preference 2</label>
+			          <select class="form-control" ng-options="item._id as item.name for item in projects" ng-model="user.preferences[1]" required>
+			          </select>
+			          <p ng-show="alerts[1]" style="color:red">Duplicate</p>
+			        </div>
+			        <div class="form-group">
+			          <label>Preference 3</label>
+			          <select class="form-control" ng-options="item._id as item.name for item in projects" ng-model="user.preferences[2]" required>
+			          </select>
+			          <p ng-show="alerts[2]" style="color:red">Duplicate</p>
+			        </div>
+			        <div class="form-group">
+			          <label>Preference 4</label>
+			          <select class="form-control" ng-options="item._id as item.name for item in projects" ng-model="user.preferences[3]" required>
+			          </select>
+			          <p ng-show="alerts[3]" style="color:red">Duplicate</p>
+			        </div>
+			        <div class="form-group">
+			          <label>Preference 5</label>
+			          <select class="form-control" ng-options="item._id as item.name for item in projects" ng-model="user.preferences[4]" required>
+			          </select>
+			          <p ng-show="alerts[4]" style="color:red">Duplicate</p>
+			        </div>
+			        <h3>Skills:</h3>
+			        <div ng-repeat="skill in skills">
+			        	<input type="checkbox" ng-model="skillset[$index]"><label>{{skill}}</label></input>
+			        </div>
+			        <div>
+			          <button class="btn btn-lg " type="submit">
+			            Submit
+			          </button>
+			        </div>
+
+			      </form>
+			    </div>
+			  </div>
+			  <hr>
+			</div>
+		</div>
+	</div>
+</div>
