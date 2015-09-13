@@ -11,7 +11,7 @@ angular.module('nss2016App')
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
-
+    console.log($scope.isLoggedIn())
     $scope.logout = function() {
       Auth.logout();
       $location.path('/login');
