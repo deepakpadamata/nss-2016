@@ -15,5 +15,6 @@ router.get('/:id', auth.isAuthenticated(), controller.show);
 router.post('/', controller.create);
 router.post('/forgotPassword', controller.sendResetMail);
 router.post('/resetPassword/:token', controller.resetPassword);
+router.post('/editProfile', auth.isAuthenticated(), controller.edit);
 
 module.exports = router;

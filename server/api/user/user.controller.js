@@ -2,6 +2,7 @@
 
 var User = require('./user.model');
 var passport = require('passport');
+var _ = require('lodash');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
 var async = require('async');
@@ -295,8 +296,6 @@ exports.index = function(req, res) {
  * Creates a new user
  */
 exports.create = function (req, res, next) {
-  for(i = 0; i < vols.length; i++){
-    if(req.body.rollNumber.toUpperCase() === vols[i]){
       var newUser = new User(req.body);
       newUser.provider = 'local';
       newUser.role = 'user';
@@ -305,8 +304,6 @@ exports.create = function (req, res, next) {
         var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
         res.json({ token: token });
       });
-    }
-  }
 };
 
 /**
@@ -351,6 +348,31 @@ exports.changePassword = function(req, res, next) {
     } else {
       res.send(403);
     }
+  });
+};
+
+exports.edit = function (req, res, next) {
+  User.findById(req.user._id , function (err, user) {
+    if (err) return next(err);
+    if (!user) return res.send(401);
+    req.body.salt = undefined;
+    req.body.hashedPassword = undefined;
+    req.body.project = undefined;
+    req.body.provider = undefined;
+    req.body.__v = undefined;
+    if(req.body.skills){
+      user.skills = undefined;
+    }
+    if(req.body.preferences){
+      user.preferences = undefined;
+    }
+    var updated = _.merge(user, req.body);
+    console.log(updated);
+    updated.updatedOn = Date.now();
+    updated.save(function (err) {
+      if(err) return validationError(res, err);
+      res.status(200).json({message: "Successful"});
+    });
   });
 };
 

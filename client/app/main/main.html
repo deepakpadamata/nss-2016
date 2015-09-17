@@ -1,28 +1,82 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
+<div class="container-fluid main_container" style="padding-top: 0px">
+        <div class="col-md-2">
+            <div class="well sidebar-nav" id="left_bar">
+                <ul class="nav nav-list">
+                    <!-- <li id="aintro"><a href="cd../intro.html" target="_blank">Introduction</a></li> -->
+                    <!-- <li id="ahistory"><a href="/History">History</a></li> -->
+                    <li id="ablog"><a href="http://nssiitm.wordpress.com" target="_blank">NSS Blog </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pull-right col-md-9">
+                <div class="row-fluid">
+                        <header class="jumbotron">
+                            <div class="row-fluid " >
+                                <div class="span3">
+                                    <img class="img-rounded pull-left" src="assets/images/nss_logo.png">
+                                </div>
+                                <div class="span8">
+                                    <center>
+                                        <h1>National Service Scheme</h1>
+                                        <h3><a href="http://www.iitm.ac.in"> IIT Madras </a></h3>
+                                    </center>
+                                </div>
+                            </div>
+                        </header>
+                </div>
+            <div id="content_data" class="row-fluid">
+                  <div class="row-fluid">
+                    <div id="my_carousel" class="carousel slide offset1 span10">
+                    
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <a href="/Home"> 
+                                    <img src="assets/images/home.png"> 
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/projects"> <img src="assets/images/projects.png"> </a>
+                            </div>
+                            <div class="item active">
+                                <a href="/Events"> <img src="assets/images/events.png"> </a>
+                            </div>
+                            <div class="item">
+                                <a href="/Archives"> <img src="assets/images/archives.png"> </a>
+                            </div>
+                            <div class="item">
+                                <a href="/JoinUs"> <img src="assets/images/join-us.png"> </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control left" href="#my_carousel" data-slide="prev">‹</a>
+                        <a class="carousel-control right" href="#my_carousel" data-slide="next">›</a>
+                    </div>
+                </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+                <div class="row-fluid">
+                    <p>
+                        </p><blockquote>
+                             The best way to find yourself is to lose yourself in the service of others.
+                            <small><cite title="Source Title">Mahatma Gandhi</cite></small>
+                        </blockquote>
+                    <p></p>
+                
+                    <h2 style="text-decoration:bold; text-align:center">News</h2>
+                </div>
 
-<footer class="footer">
-  <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
-  </div>
-</footer>
+            </div>
+        </div><!--/span-->
+</div><!--/container-->
+        
+    <hr>
+    
+<div class="container-fluid">
+        <footer>
+            <p><small>© All Rights Reserved NSS IITM. Site Built By the NSS WebOps team. <a href="/Credits"> Credits </a></small></p>
+        </footer>
+</div><!--/container-->
+
+
+
+

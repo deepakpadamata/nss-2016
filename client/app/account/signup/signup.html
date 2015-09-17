@@ -1,13 +1,30 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
+
+
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Sign up</h1>
+      <div class="row-fluid">
+            <header class="jumbotron">
+                <div class="row-fluid">
+                    <div class="">
+                        <img class="img-rounded pull-left" src="assets/images/nss_logo.png">
+                    </div>
+                    <div class="">
+                        <center>
+                            <h1>National Service Scheme</h1>
+                            <h3>Sign Up</h3>
+                        </center>
+                    </div>
+                </div>
+            </header>
+          </div>
     </div>
-    <div class="col-sm-12">
+    <div>
       <form class="form" name="form" ng-submit="register(form)" novalidate>
 
+        
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                             'has-error': form.name.$invalid && submitted }">
           <label>Name</label>
@@ -18,7 +35,26 @@
             A name is required
           </p>
         </div>
+      <div>
+        <label>Roll No</label>
 
+          <input type="text" name="rollNumber" class="form-control" ng-model="user.rollNumber"
+                 required/>
+          <p class="help-block" ng-show="form.name.$error.required && submitted">
+            A roll no. is required
+          </p>
+        </div>
+        <div>
+        <label>Phone no.</label>
+
+          <input type="text" name="phoneNumber" class="form-control" ng-model="user.phoneNumber"
+                 required/>
+          <p class="help-block" ng-show="form.name.$error.required && submitted">
+            A phone no. is required
+          </p>
+        </div>
+
+        <div>
         <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
                                             'has-error': form.email.$invalid && submitted }">
           <label>Email</label>
@@ -36,6 +72,8 @@
             {{ errors.email }}
           </p>
         </div>
+      </div>
+      <div>
 
         <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
                                             'has-error': form.password.$invalid && submitted }">
@@ -53,6 +91,9 @@
             {{ errors.password }}
           </p>
         </div>
+      </div>
+      <label class="checkbox-inline"><input type="checkbox" ng-model="user.confirm">I agree to be a part of the NSS team and will not leave it later for NCC/NSO in this academic year.</label>
+      <br>
 
         <div>
           <button class="btn btn-inverse btn-lg btn-login" type="submit">

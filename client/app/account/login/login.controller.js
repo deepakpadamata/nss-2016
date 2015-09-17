@@ -10,12 +10,12 @@ angular.module('nss2016App')
 
       if(form.$valid) {
         Auth.login({
-          email: $scope.user.email,
+          rollNumber: $scope.user.rollNumber,
           password: $scope.user.password
         })
         .then( function() {
           // Logged in, redirect to home
-          $location.path('/');
+          $location.path('/preferences');
         })
         .catch( function(err) {
           $scope.errors.other = err.message;
