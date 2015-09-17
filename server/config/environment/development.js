@@ -8,5 +8,5 @@ module.exports = {
     uri: 'mongodb://localhost/nss2016-dev'
   },
 
-  seedDB: false
+  seedDB: true
 };

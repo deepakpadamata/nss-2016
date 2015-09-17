@@ -8,7 +8,7 @@ exports.setup = function (User, config) {
     },
     function(rollNumber, password, done) {
       User.findOne({
-        rollNumber: rollNumber.toUpperCase()
+        rollNumber: rollNumber.toLowerCase()
       }, function(err, user) {
         if (err) return done(err);
 
