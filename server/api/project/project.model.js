@@ -7,11 +7,11 @@ var ProjectSchema = new Schema({
   name: String,
   description: String,
   motivation: String,
-  active: {type: Boolean, default: true},
+  active: Boolean,
   representatives: [ { type: Schema.Types.ObjectId, ref: 'User' } ],
   members: [ { type: Schema.Types.ObjectId, ref: 'User' } ],
-  createdOn: {type: Date, default: Date.now()},
-  updatedOn: {type: Date, default: Date.now()}
+  createdOn: Date,
+  updatedOn: Date
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);

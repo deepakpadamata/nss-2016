@@ -21,7 +21,7 @@ angular.module('nss2016App')
         var deferred = $q.defer();
 
         $http.post('/auth/local', {
-          rollNumber: user.rollNumber,
+          email: user.email,
           password: user.password
         }).
         success(function(data) {

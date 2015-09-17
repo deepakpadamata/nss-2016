@@ -13,8 +13,11 @@ router.get('/me', auth.isAuthenticated(), controller.me);
 router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
 router.get('/:id', auth.isAuthenticated(), controller.show);
 router.post('/', controller.create);
+<<<<<<< HEAD
 router.post('/forgotPassword', controller.sendResetMail);
 router.post('/resetPassword/:token', controller.resetPassword);
 router.post('/editProfile', auth.isAuthenticated(), controller.edit);
+=======
+>>>>>>> parent of ee3123a... s
 
 module.exports = router;

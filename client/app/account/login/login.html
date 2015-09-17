@@ -2,22 +2,34 @@
 
 <div class="container-fluid main_container" style="padding-top: 0px">
      <div class="row-fluid">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="row-fluid">
-            <header class="jumbotron">
-                <div class="row-fluid">
-                    <div class="span3">
-                        <img class="img-rounded pull-left" src="assets/images/nss_logo.png">
-                    </div>
-                    <div class="span8">
-                        <center>
-                            <h1>National Service Scheme</h1>
-                            <h3><a href="login"> Login </a></h3>
-                        </center>
-                    </div>
+            <div class="span3">
+                <div class="well sidebar-nav" style= "width : 350px" id="left_bar">
+                    <ul class="nav nav-list">
+                        <li id="aintro"><a href="/Introduction">Introduction</a></li>
+                        <li id="ahistory"><a href="/History">History</a></li>
+                        <li id="acontact"><a href="/Contact">Contact Us</a></li>
+                        <li id="ablog"><a href="http://nssiitm.wordpress.com" target="_blank">NSS Blog </a></li>
+                    </ul>
                 </div>
-            </header>
-          </div>
+            </div>
+        <div class="span9 pull-right">
+                <div class="row-fluid" style= "width : 1000px; postion : right">
+                    
+                        <header class="jumbotron">
+                            <div class="row-fluid " >
+                                <div class="span3">
+                                    <img class="img-rounded pull-left" src="assets/images/nss_logo.png">
+                                </div>
+                                <div class="span8">
+                                    <center>
+                                        <h1>National Service Scheme</h1>
+                                        <h3><a href="login"> Login </a></h3>
+                                    </center>
+                                </div>
+                            </div>
+                        </header>
+                    
+                </div>
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -30,7 +42,7 @@
         <div class="form-group">
           <label>Roll No.</label>
 
-          <input type="text" name="rollNumber" class="form-control" ng-model="user.rollNumber" required>
+          <input type="text" name="name" class="form-control" ng-model="user.roll" required>
         </div>
 
         <div class="form-group">
