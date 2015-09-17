@@ -4,14 +4,11 @@ var User = require('./user.model');
 var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
-<<<<<<< HEAD
 var async = require('async');
 var crypto = require('crypto');
 var nodemailer = require('nodemailer');
 var nodemailer = require('nodemailer');
 var smtpapi    = require('smtpapi');
-=======
->>>>>>> parent of ee3123a... s
 var vols= ["AE15B004",
 "AE15B006",
 "AE15B007",

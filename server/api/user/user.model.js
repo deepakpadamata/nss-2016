@@ -14,6 +14,8 @@ var UserSchema = new Schema({
     default: 'user'
   },
   hashedPassword: String,
+  resetPasswordToken: String,
+  resetPasswordExpires: Date,
   provider: String,
   salt: String,
   project: [ { type: Schema.Types.ObjectId, ref: 'Project' } ],
