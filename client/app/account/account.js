@@ -18,6 +18,11 @@ angular.module('nss2016App')
         templateUrl: 'app/account/signup/signup.html',
         controller: 'SignupCtrl'
       })
+      .state('forgotPassword', {
+        url: '/forgotPassword',
+        templateUrl: 'app/account/password/forgotPassword.html',
+        controller: 'ForgotPasswordCtrl'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
